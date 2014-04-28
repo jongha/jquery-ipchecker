@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>jQuery IPChecker Plugin</title>
+	<link href="../libs/css/bootstrap.min.css" rel="stylesheet">
+	<style>body { margin: 50px 0px; }</style>
+</head>
+<body>
+	<div class="container">
+		<h1 class="text-center">jQuery IPChecker Plugin Demo</h1>
+		<hr />
+		<h2 class="text-center"><strong>Your public IP is</strong>: <span id="ip1">Loading...</span><h2>
+		<h2 class="text-center"><strong>Your public IP is</strong>: <span id="ip2">Loading...</span><h2>		
+		<script type="text/javascript" src="../libs/js/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="../src/jquery.ipchecker.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$().ip({ output: "#ip1" });
+				$().ip({ output: function(data) { $("#ip2").html(data); } });				
+			});
+		</script>
+	</div>
+</body>
+
